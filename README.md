@@ -49,7 +49,7 @@ A full play.
 <br>
 ### Gif
 
-![gif demo](/assetsReadme/fullGameGif.gif)
+![gif demo](/assetsReadme/demo.gif)
 
 ### Image
  
