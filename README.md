@@ -52,8 +52,9 @@ A full play.
 ![gif demo](/assetsReadme/fullGameGif.gif)
 
 ### Image
-
+ 
 ![image of the play](assetsReadme/fullGame.png)
+
 ### Video
 https://user-images.githubusercontent.com/70602890/153481749-d4635c79-3c4e-4b78-8eaf-633c3cb5c5d5.mp4
 
