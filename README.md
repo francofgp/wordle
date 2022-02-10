@@ -27,8 +27,8 @@ This is a clone of the famous game [Wordle](https://www.powerlanguage.co.uk/word
     - [Gif](#gif)
     - [Image](#image)
     - [Video](#video)
-    - [Acknowledgements](#acknowledgements)
-    - [License](#license)
+  - [Acknowledgements](#acknowledgements)
+  - [License](#license)
   
 ### [Run the project](#Run-the-project)
 
@@ -61,7 +61,7 @@ https://user-images.githubusercontent.com/70602890/153481749-d4635c79-3c4e-4b78-
 
 
 
-### [Acknowledgements](#Acknowledgements)
+## [Acknowledgements](#Acknowledgements)
 
 ---
 
@@ -73,7 +73,7 @@ https://user-images.githubusercontent.com/70602890/153481749-d4635c79-3c4e-4b78-
 -   [Open](https://github.com/sindresorhus/open) Open stuff like URLs, files, executables. Cross-platform.
 
 
-### [License](#license)
+## [License](#license)
 
 Closures is provided under the [MIT License](https://github.com/vhesener/Closures/blob/master/LICENSE).
 
