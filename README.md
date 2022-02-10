@@ -48,7 +48,7 @@ node index.js
 A full play.
 <br>
 ### Gif
-![Gid of the play](assetsReadme/fullGameGif.gif)
+![gif demo](/assetsReadme/fullGameGif.gif)
 
 ### Image
 
