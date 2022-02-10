@@ -11,7 +11,7 @@ let wordleWord
 let colorizedArray
 let isWin = false
 const words = new Words()
-
+let shareData = []
 function fillArrayWithZeros(length = 5) {
     colorizedArray = new Array(5).fill(0);
 }
@@ -88,6 +88,7 @@ function printWordle(guess) {
 
 
     }
+    shareData.push(colorizedArray)
     //break line
     console.log()
 
@@ -107,6 +108,67 @@ function checkWin() {
 
     return isWin
 }
+
+
+function resetShareData() {
+    shareData = []
+}
+function createMessage() {
+    const breakLine = '%0D'
+    let message = `Wordle in NodeJS${breakLine}`
+
+
+    for (let index = 0; index < shareData.length; index++) {
+        shareData[index] = shareData[index].map((element) => {
+            switch (element) {
+                case 'inWord':
+                    element = '🟨'
+                    break;
+                case 'match':
+                    element = '🟩'
+                    break
+                default:
+                    element = '⬛'
+                    break;
+            }
+            return element
+        })
+        message = message + shareData[index].join("") + breakLine
+    }
+    const githubRepo = `https://github.com/francofgp/wordle`
+    message += githubRepo
+    return message
+}
+async function shareOnTwitter() {
+    const message = createMessage()
+    const questions = [
+
+        {
+            type: 'list',
+            name: 'options',
+            message: "Share on twitter?",
+            default() {
+                return 'Yes';
+            },
+            choices: ['Yes', 'No'],
+
+        },
+    ];
+    const url = `https://twitter.com/intent/tweet?text=${message}`
+    const answers = await inquirer.prompt(questions)
+    const { options } = answers
+    switch (options) {
+        case 'Yes':
+            await open(url);
+            break;
+        case 'No':
+            break;
+        default:
+            break;
+    }
+    resetShareData()
+
+}
 async function printVictoryOrDefeat() {
 
     const text = isWin ? "You won!" : "You lose  : ("
@@ -124,6 +186,7 @@ async function printVictoryOrDefeat() {
         console.log(`The word was ${chalk.bgMagenta(wordleWord)}`)
     }
 
+    await shareOnTwitter()
 
 }
 
@@ -149,7 +212,7 @@ async function play() {
     wordleWord = words.getRandomWord()
 
     //If you want to know the word before hand, uncomment this line
-    console.log(wordleWord)
+    //console.log(wordleWord)
     for (let index = 0; index < 6; index++) {
 
         const questions = [
@@ -210,7 +273,7 @@ async function showOptions() {
             await showOptions()
             break;
         case 'Visit website':
-            await open('https://sindresorhus.com');
+            await open('https://twitter.com/intent/tweet?text=Wordle 236 X/6 ⬛🟨⬛⬛⬛%0D⬛⬛⬛⬛🟩%0D⬛⬛🟨⬛⬛%0D⬛⬛⬛⬛🟨%0D🟨🟨🟨⬛⬛%0D🟨⬛🟨⬛🟩');
             await showOptions()
             break;
         default:
