@@ -46,7 +46,7 @@ async function showInstructions() {
     ${chalk.green('W')} E A R Y
     The letter "W" is in the word and in the correct spot.
 
-    P ${chalk.green('I')} L L S
+    P ${chalk.yellow('I')} L L S
     The letter "I" is in the word but in the wrong spot.
 
     V A G U E
