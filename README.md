@@ -7,11 +7,12 @@ This is a clone of the famous game [Wordle](https://www.powerlanguage.co.uk/word
 <br>
 
 -   Unlimited words per day 🤘.
+-   Share your play on twitter.
 
 
 <div align="center">
 
-![Imgur](/assetsReadme/logo.png)
+![Imgur](/assetsReadme/logo2.png)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
